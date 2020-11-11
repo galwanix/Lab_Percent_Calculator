@@ -39,12 +39,13 @@
             this.textBoxContainerCount = new System.Windows.Forms.TextBox();
             this.textBoxAlcoholPercentage = new System.Windows.Forms.TextBox();
             this.textBoxContainerSize = new System.Windows.Forms.TextBox();
+            this.labelErrors = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 75);
+            this.label1.Location = new System.Drawing.Point(9, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(128, 17);
             this.label1.TabIndex = 3;
@@ -53,7 +54,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 104);
+            this.label2.Location = new System.Drawing.Point(12, 58);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 17);
             this.label2.TabIndex = 4;
@@ -62,7 +63,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 132);
+            this.label3.Location = new System.Drawing.Point(12, 86);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(89, 17);
             this.label3.TabIndex = 5;
@@ -71,7 +72,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 190);
+            this.label5.Location = new System.Drawing.Point(12, 135);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(106, 17);
             this.label5.TabIndex = 6;
@@ -80,7 +81,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 217);
+            this.label4.Location = new System.Drawing.Point(12, 162);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(125, 17);
             this.label4.TabIndex = 7;
@@ -89,7 +90,7 @@
             // labelDrinkVolume
             // 
             this.labelDrinkVolume.AutoSize = true;
-            this.labelDrinkVolume.Location = new System.Drawing.Point(147, 189);
+            this.labelDrinkVolume.Location = new System.Drawing.Point(147, 134);
             this.labelDrinkVolume.Name = "labelDrinkVolume";
             this.labelDrinkVolume.Size = new System.Drawing.Size(0, 17);
             this.labelDrinkVolume.TabIndex = 8;
@@ -97,14 +98,14 @@
             // labelAlcoholVolume
             // 
             this.labelAlcoholVolume.AutoSize = true;
-            this.labelAlcoholVolume.Location = new System.Drawing.Point(147, 217);
+            this.labelAlcoholVolume.Location = new System.Drawing.Point(147, 162);
             this.labelAlcoholVolume.Name = "labelAlcoholVolume";
             this.labelAlcoholVolume.Size = new System.Drawing.Size(0, 17);
             this.labelAlcoholVolume.TabIndex = 9;
             // 
             // buttonCalculate
             // 
-            this.buttonCalculate.Location = new System.Drawing.Point(95, 262);
+            this.buttonCalculate.Location = new System.Drawing.Point(95, 207);
             this.buttonCalculate.Name = "buttonCalculate";
             this.buttonCalculate.Size = new System.Drawing.Size(75, 23);
             this.buttonCalculate.TabIndex = 10;
@@ -114,30 +115,39 @@
             // 
             // textBoxContainerCount
             // 
-            this.textBoxContainerCount.Location = new System.Drawing.Point(147, 129);
+            this.textBoxContainerCount.Location = new System.Drawing.Point(143, 83);
             this.textBoxContainerCount.Name = "textBoxContainerCount";
             this.textBoxContainerCount.Size = new System.Drawing.Size(100, 22);
             this.textBoxContainerCount.TabIndex = 2;
             // 
             // textBoxAlcoholPercentage
             // 
-            this.textBoxAlcoholPercentage.Location = new System.Drawing.Point(147, 101);
+            this.textBoxAlcoholPercentage.Location = new System.Drawing.Point(143, 55);
             this.textBoxAlcoholPercentage.Name = "textBoxAlcoholPercentage";
             this.textBoxAlcoholPercentage.Size = new System.Drawing.Size(100, 22);
             this.textBoxAlcoholPercentage.TabIndex = 1;
             // 
             // textBoxContainerSize
             // 
-            this.textBoxContainerSize.Location = new System.Drawing.Point(147, 73);
+            this.textBoxContainerSize.Location = new System.Drawing.Point(143, 27);
             this.textBoxContainerSize.Name = "textBoxContainerSize";
             this.textBoxContainerSize.Size = new System.Drawing.Size(100, 22);
             this.textBoxContainerSize.TabIndex = 0;
+            // 
+            // labelErrors
+            // 
+            this.labelErrors.AutoSize = true;
+            this.labelErrors.Location = new System.Drawing.Point(13, 13);
+            this.labelErrors.Name = "labelErrors";
+            this.labelErrors.Size = new System.Drawing.Size(0, 17);
+            this.labelErrors.TabIndex = 11;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelErrors);
             this.Controls.Add(this.buttonCalculate);
             this.Controls.Add(this.labelAlcoholVolume);
             this.Controls.Add(this.labelDrinkVolume);
@@ -168,6 +178,7 @@
         private System.Windows.Forms.TextBox textBoxContainerCount;
         private System.Windows.Forms.TextBox textBoxAlcoholPercentage;
         private System.Windows.Forms.TextBox textBoxContainerSize;
+        private System.Windows.Forms.Label labelErrors;
     }
 }
 

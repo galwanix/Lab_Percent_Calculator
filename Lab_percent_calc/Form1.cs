@@ -39,9 +39,25 @@ namespace Lab_percent_calc
 
         private void buttonCalculate_Click(object sender, EventArgs e)
         {
-            textBoxContainerSize.Text = logic.ContainerSize.ToString();
-            textBoxContainerCount.Text = logic.ContainerCount.ToString();
-            textBoxAlcoholPercentage.Text = logic.AlcoholPercentage.ToString();
+            if (!float.TryParse(textBoxContainerSize.Text, out float size))
+            {
+                labelErrors.Text = "Błąd odczytu rozmiaru naczynia.";
+                return;
+            }
+            if (!float.TryParse(textBoxAlcoholPercentage.Text, out float percentage))
+            {
+                labelErrors.Text = "Błąd odczytu zawartości alkoholu.";
+                return;
+            }
+            if (!int.TryParse(textBoxContainerCount.Text, out int count))
+            {
+                labelErrors.Text = "Błąd odczytu ilości naczyń.";
+                return;
+            }
+            labelErrors.Text = "";
+            logic.AlcoholPercentage = percentage;
+            logic.ContainerCount = count;
+            logic.ContainerSize = size;
             labelDrinkVolume.Text = logic.DrinkVolume.ToString();
             labelAlcoholVolume.Text = logic.AlcoholVolume.ToString();
         }

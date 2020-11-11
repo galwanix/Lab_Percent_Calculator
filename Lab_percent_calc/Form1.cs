@@ -35,6 +35,16 @@ namespace Lab_percent_calc
         {
             InitializeComponent();
             logic = new AlcoholLogic();
+            string[] alcohols = logic.GetAlcoholNames(),
+                glasses = logic.GetGlassNames();
+            comboBoxAlcohols.Items.Add("Inne");
+            comboBoxGlasses.Items.Add("Inne");
+            comboBoxAlcohols.SelectedIndex = 0;
+            comboBoxGlasses.SelectedIndex = 0;
+            foreach (string s in alcohols)
+                comboBoxAlcohols.Items.Add(s);
+            foreach (string s in glasses)
+                comboBoxGlasses.Items.Add(s);
         }
 
         private void buttonCalculate_Click(object sender, EventArgs e)
@@ -60,6 +70,34 @@ namespace Lab_percent_calc
             logic.ContainerSize = size;
             labelDrinkVolume.Text = logic.DrinkVolume.ToString();
             labelAlcoholVolume.Text = logic.AlcoholVolume.ToString();
+        }
+
+        private void comboBoxGlasses_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(comboBoxGlasses.SelectedIndex == 0)
+            {
+                textBoxContainerSize.Enabled = true;
+                textBoxContainerSize.Text = "";
+            }
+            else
+            {
+                textBoxContainerSize.Enabled = false;
+                textBoxContainerSize.Text = logic.GetGlass((string)comboBoxGlasses.SelectedItem).ToString();
+            }
+        }
+
+        private void comboBoxAlcohols_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxAlcohols.SelectedIndex == 0)
+            {
+                textBoxAlcoholPercentage.Enabled = true;
+                textBoxAlcoholPercentage.Text = "";
+            }
+            else
+            {
+                textBoxAlcoholPercentage.Enabled = false;
+                textBoxAlcoholPercentage.Text = logic.GetGlass((string)comboBoxAlcohols.SelectedItem).ToString();
+            }
         }
     }
 }

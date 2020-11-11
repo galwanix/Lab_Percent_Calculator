@@ -19,20 +19,29 @@ namespace Lab_percent_calc
             AlcoholPercentage = 3.5f;
         }
 
-        public float ContainerSize 
-        { 
-            get => containerSize; 
-            set => containerSize = value; 
+        public float ContainerSize
+        {
+            get => containerSize;
+            set
+            {
+                containerSize = value > 0 ? value : 0;
+            }
         }
-        public float AlcoholPercentage 
-        { 
-            get => alcoholPercentage; 
-            set => alcoholPercentage = value; 
+        public float AlcoholPercentage
+        {
+            get => alcoholPercentage;
+            set
+            {
+                alcoholPercentage = (value > 0 && value < 100) ? value : 0;
+            }
         }
-        public int ContainerCount 
-        { 
-            get => containerNumber; 
-            set => containerNumber = value; 
+        public int ContainerCount
+        {
+            get => containerNumber;
+            set
+            {
+                containerNumber = value > 0 ? value : 0;
+            }
         }
         public float DrinkVolume => ContainerSize * ContainerCount;
         public float AlcoholVolume => ContainerSize * ContainerCount * AlcoholPercentage / 100;

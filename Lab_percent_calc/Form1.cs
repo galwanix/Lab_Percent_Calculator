@@ -96,7 +96,7 @@ namespace Lab_percent_calc
             else
             {
                 textBoxAlcoholPercentage.Enabled = false;
-                textBoxAlcoholPercentage.Text = logic.GetGlass((string)comboBoxAlcohols.SelectedItem).ToString();
+                textBoxAlcoholPercentage.Text = logic.GetAlcohol((string)comboBoxAlcohols.SelectedItem).ToString();
             }
         }
     }
